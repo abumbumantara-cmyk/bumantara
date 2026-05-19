@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Saya</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a3a2a 0%, #2d6b4f 50%, #1a3a2a 100%);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: #4ade80;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        .card-hover {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up {
+            animation: fadeUp 0.6s ease forwards;
+        }
+        .animate-delay-1 { animation-delay: 0.1s; opacity: 0; }
+        .animate-delay-2 { animation-delay: 0.2s; opacity: 0; }
+        .animate-delay-3 { animation-delay: 0.3s; opacity: 0; }
+    </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div id="app-wrapper" class="w-full h-full overflow-auto bg-stone-50">
+   <header class="hero-gradient text-white py-16 px-6 text-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+     <div class="absolute top-10 left-10 w-32 h-32 border border-white/30 rounded-full"></div>
+     <div class="absolute bottom-10 right-20 w-48 h-48 border border-white/20 rounded-full"></div>
+     <div class="absolute top-20 right-40 w-16 h-16 border border-white/20 rounded-full"></div>
+    </div>
+    <div class="relative z-10 animate-fade-up">
+     <h1 id="site-title" class="text-3xl md:text-5xl font-800 tracking-tight mb-3">Selamat Datang di Website Saya</h1>
+     <p class="text-green-200 text-lg font-medium">Menjelajahi dunia digital bersama</p>
+    </div>
+   </header>
+   <nav class="bg-stone-900 sticky top-0 z-50">
+    <ul class="flex justify-center flex-wrap gap-1 py-2 px-4">
+     <li><a href="#" class="nav-link text-stone-300 hover:text-white px-5 py-3 block text-sm font-medium transition-colors"><i data-lucide="home" class="inline w-4 h-4 mr-1 -mt-0.5"></i> Beranda</a></li>
+     <li><a href="#" class="nav-link text-stone-300 hover:text-white px-5 py-3 block text-sm font-medium transition-colors"><i data-lucide="info" class="inline w-4 h-4 mr-1 -mt-0.5"></i> Tentang</a></li>
+     <li><a href="#" class="nav-link text-stone-300 hover:text-white px-5 py-3 block text-sm font-medium transition-colors"><i data-lucide="briefcase" class="inline w-4 h-4 mr-1 -mt-0.5"></i> Layanan</a></li>
+     <li><a href="#" class="nav-link text-stone-300 hover:text-white px-5 py-3 block text-sm font-medium transition-colors"><i data-lucide="mail" class="inline w-4 h-4 mr-1 -mt-0.5"></i> Kontak</a></li>
+    </ul>
+   </nav>
+   <main class="max-w-4xl mx-auto px-6 py-12">
+    <section class="animate-fade-up animate-delay-1">
+     <h2 id="main-heading" class="text-2xl md:text-3xl font-bold text-stone-800 mb-4">Konten Utama</h2>
+     <p id="main-paragraph" class="text-stone-600 text-lg leading-relaxed mb-10">Ini adalah halaman utama website Anda. Anda bisa menambahkan teks, gambar, dan elemen lainnya di sini.</p>
+    </section>
+    <div class="grid md:grid-cols-3 gap-6">
+     <div class="card-hover bg-white rounded-xl p-6 shadow-sm border border-stone-100 animate-fade-up animate-delay-1">
+      <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4"><i data-lucide="zap" class="w-6 h-6 text-green-700"></i>
+      </div>
+      <h3 class="font-semibold text-stone-800 mb-2">Cepat &amp; Responsif</h3>
+      <p class="text-stone-500 text-sm">Dibangun dengan performa tinggi untuk pengalaman terbaik.</p>
+     </div>
+     <div class="card-hover bg-white rounded-xl p-6 shadow-sm border border-stone-100 animate-fade-up animate-delay-2">
+      <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4"><i data-lucide="shield" class="w-6 h-6 text-green-700"></i>
+      </div>
+      <h3 class="font-semibold text-stone-800 mb-2">Aman &amp; Terpercaya</h3>
+      <p class="text-stone-500 text-sm">Keamanan data Anda adalah prioritas utama kami.</p>
+     </div>
+     <div class="card-hover bg-white rounded-xl p-6 shadow-sm border border-stone-100 animate-fade-up animate-delay-3">
+      <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4"><i data-lucide="heart" class="w-6 h-6 text-green-700"></i>
+      </div>
+      <h3 class="font-semibold text-stone-800 mb-2">Mudah Digunakan</h3>
+      <p class="text-stone-500 text-sm">Antarmuka intuitif yang dirancang untuk semua pengguna.</p>
+     </div>
+    </div>
+   </main>
+   <footer class="bg-stone-900 text-stone-400 text-center py-6 px-4 mt-12">
+    <p id="footer-text" class="text-sm">© 2026 Website Saya. Semua hak cipta dilindungi.</p>
+   </footer>
+  </div>
+  <script>
+        const defaultConfig = {
+            site_title: 'Selamat Datang di Website Saya',
+            main_heading: 'Konten Utama',
+            main_paragraph: 'Ini adalah halaman utama website Anda. Anda bisa menambahkan teks, gambar, dan elemen lainnya di sini.',
+            footer_text: '© 2026 Website Saya. Semua hak cipta dilindungi.',
+            background_color: '#fafaf9',
+            surface_color: '#ffffff',
+            text_color: '#1c1917',
+            primary_action: '#15803d',
+            secondary_action: '#292524',
+            font_family: 'Plus Jakarta Sans',
+            font_size: 16
+        };
+
+        function applyConfig(config) {
+            document.getElementById('site-title').textContent = config.site_title || defaultConfig.site_title;
+            document.getElementById('main-heading').textContent = config.main_heading || defaultConfig.main_heading;
+            document.getElementById('main-paragraph').textContent = config.main_paragraph || defaultConfig.main_paragraph;
+            document.getElementById('footer-text').textContent = config.footer_text || defaultConfig.footer_text;
+
+            const wrapper = document.getElementById('app-wrapper');
+            wrapper.style.backgroundColor = config.background_color || defaultConfig.background_color;
+
+            document.querySelectorAll('.card-hover').forEach(el => {
+                el.style.backgroundColor = config.surface_color || defaultConfig.surface_color;
+            });
+
+            document.getElementById('main-heading').style.color = config.text_color || defaultConfig.text_color;
+            document.getElementById('main-paragraph').style.color = config.text_color || defaultConfig.text_color;
+
+            const font = config.font_family || defaultConfig.font_family;
+            const baseSize = config.font_size || defaultConfig.font_size;
+            document.body.style.fontFamily = `${font}, sans-serif`;
+            document.getElementById('site-title').style.fontSize = `${baseSize * 2.5}px`;
+            document.getElementById('main-heading').style.fontSize = `${baseSize * 1.75}px`;
+            document.getElementById('main-paragraph').style.fontSize = `${baseSize}px`;
+        }
+
+        window.elementSdk.init({
+            defaultConfig,
+            onConfigChange: async (config) => { applyConfig(config); },
+            mapToCapabilities: (config) => ({
+                recolorables: [
+                    { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
+                    { get: () => config.surface_color || defaultConfig.surface_color, set: (v) => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); } },
+                    { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
+                    { get: () => config.primary_action || defaultConfig.primary_action, set: (v) => { config.primary_action = v; window.elementSdk.setConfig({ primary_action: v }); } },
+                    { get: () => config.secondary_action || defaultConfig.secondary_action, set: (v) => { config.secondary_action = v; window.elementSdk.setConfig({ secondary_action: v }); } }
+                ],
+                borderables: [],
+                fontEditable: { get: () => config.font_family || defaultConfig.font_family, set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); } },
+                fontSizeable: { get: () => config.font_size || defaultConfig.font_size, set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); } }
+            }),
+            mapToEditPanelValues: (config) => new Map([
+                ['site_title', config.site_title || defaultConfig.site_title],
+                ['main_heading', config.main_heading || defaultConfig.main_heading],
+                ['main_paragraph', config.main_paragraph || defaultConfig.main_paragraph],
+                ['footer_text', config.footer_text || defaultConfig.footer_text]
+            ])
+        });
+
+        lucide.createIcons();
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9fe141e5e7315f2f',t:'MTc3OTE3NDM3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
